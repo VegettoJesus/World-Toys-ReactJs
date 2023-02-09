@@ -1,0 +1,248 @@
+@font-face {
+  font-family: "letra-jugete";
+  src: url(../src/Letras/letra_juguete.ttf);
+}
+
+@font-face {
+  font-family: "letra-bienvenida";
+  src: url(../src/Letras/letra-bienvenida.ttf);
+}
+
+@font-face {
+  font-family: "letra-toys";
+  src: url(../src/Letras/letra_toys.ttf);
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(177deg,#e36ad8,#f1f063);
+  background-size: 120% 120%;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.letra{
+  font-family: 'letra-jugete';
+  color: var(--textColor);
+  font-size: 1.8rem;
+}
+
+:root{
+  --mainColor: #3c51a2;
+  --mainColorLight: #5767aa;
+  --secondaryColor: #cfe649;
+  --textColor:#eee;
+}
+
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  padding: 0 2rem;
+  background-color: var(--mainColor);
+  color: var(--textColor);
+}
+
+nav a{
+  margin: 0 2rem;
+  color: var(--textColor);
+  text-decoration: none;
+}
+
+nav a:hover{
+  color: var(--secondaryColor);
+}
+
+header .nav-btn{
+  padding: 5px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--textColor);
+  visibility: hidden;
+  opacity: 0;
+  font-size: 1.8rem;
+}
+.logo{
+  height: 9vmin;
+}
+.carrito{
+  height: 5vmin;
+  padding-right: 7px;
+}
+.car{
+  display: -webkit-inline-box;
+  font-size: 3vmin;
+  font-family: 'letra-jugete';
+}
+.bienvenida-centrar{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'letra-bienvenida';
+}
+.bienvenida2{
+  text-align: center;
+  font-family: 'letra-toys';
+  padding: 50px;
+}
+.bienvenida{
+  text-align: center;
+  font-family: 'letra-bienvenida';
+  padding: 50px;
+}
+.detalle{
+  text-shadow: -3px 3px #eee;
+}
+@media only screen and (max-width: 1024px) {
+    header .nav-btn{
+      visibility: visible;
+      opacity: 1;
+    }
+
+    header nav{
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      background-color: var(--mainColor);
+      transition: 1s;
+      transform: translateY(-100vh);
+    }
+
+    header .responsive_nav{
+      transform: none;
+    }
+
+    nav .nav-close-btn{
+      position:absolute;
+      top: 2rem;
+      right: 2rem;
+    }
+    nav a{
+      font-size: 1.5rem;
+    }
+}
+.btn1{
+  background-color: #fd6fe7;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+}
+.btn2{
+  position: relative;
+  padding: 15px 15px;
+  text-decoration: none;
+  color:rgb(0, 0, 0);
+  letter-spacing: 4px;
+  background: rgb(120, 174, 250);
+}
+.btn2:hover{
+  background: rgb(57, 140, 255);
+}
+.contenedor{
+  place-content: center;
+  height: 100vh;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contenedor2{
+  place-content: center;
+  height: 100vh;
+  color: #000;
+
+  align-items: center;
+  justify-content: center;
+}
+.cargando{ 
+  position: relative; 
+  color: #FFF;
+  margin-top: 2em;
+  letter-spacing: 0.08em;
+  text-transform: uppercase
+}
+
+.rueda {
+  border: 10px solid rgba(255, 255, 255, .3);
+  border-radius: 50%;
+  border-left-color: transparent;
+  width: 80px;
+  height: 80px;
+  animation: giro 1s linear infinite;
+}
+
+@keyframes giro {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.btn3{
+  width: 100px;
+  height: 50px;
+  font-family: letra-toys;
+  border-radius: 10px;
+  width: 100px;
+  text-decoration: none;
+  color: #fff;
+  background-color: rgba(141, 252, 104, 0.767);
+}
+
+.btn3:hover{
+  background-color: transparent;
+  border: 2px solid rgba(72, 229, 19, 0.767);
+  color: rgba(73, 239, 17, 0.767);
+}
+.btn4{
+  position: relative;
+  padding: 15px 15px;
+  text-decoration: none;
+  color:rgb(0, 0, 0);
+  background: rgb(250, 207, 120);
+}
+.btn4:hover{
+  background: rgb(230, 157, 10);
+}
+.itemCart{
+  max-width: 500px;
+  margin: 1rem auto;
+}
+
+.shadow-card{
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.letra-card{
+  font-family: 'letra-toys';
+}
+
+
