@@ -244,5 +244,24 @@ header .nav-btn{
 .letra-card{
   font-family: 'letra-toys';
 }
-
+.formulario{
+  width: 360px;
+  height: min-content;
+  padding: 20px;
+  border-radius: 12px;
+  background: #9bcbf8;
+  margin: auto;
+  margin-top: 5rem;
+  
+}
+.formulario h1{
+  font-size: 36px;
+  margin-bottom: 25px;
+}
+.formulario form{
+  font-size: 20px;
+}
+.formulario form .form-group{
+  margin-bottom: 12px;
+}
 
