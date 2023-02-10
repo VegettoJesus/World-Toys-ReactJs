@@ -29,7 +29,6 @@ const Checkout = () => {
     
             const ids = cart.map(toys => toys.id)
             const juguetesRef = query(collection(db, 'juguetes'), where(documentId(),'in',ids))
-    
             const juguetesAddredToCartFromFirestore = await getDocs(juguetesRef)
             const { docs } = juguetesAddredToCartFromFirestore
     
@@ -37,6 +36,7 @@ const Checkout = () => {
     
             docs.forEach(doc =>{
                 const dataDoc = doc.data()
+                console.log('dataDoc: ',dataDoc)
                 const stockDb = dataDoc.stock
                 const jugueteAddedToCart = cart.find(toys => toys.id === doc.id)
                 const jugueteQuantity = jugueteAddedToCart.quantity
@@ -115,6 +115,7 @@ const Checkout = () => {
         e.preventDefault()
     }
 
+    
     return (
         <>
             <div className="formulario letra-card detalle text-center">
@@ -135,7 +136,6 @@ const Checkout = () => {
                         <input type="email" name='email' className='form-control' value={buyer.email} onChange={handleInputChange}></input>
                     </div>
                     <div className="text-center m-2 ">
-                        {/*<Form onGenerateOrder={createOrder} />*/}
                         <button className="letra-card btn4 shadow-card pb-3" onClick={createOrder}>Generar Orden</button>
                     </div> 
                 </form>
